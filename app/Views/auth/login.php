@@ -19,6 +19,8 @@
                                         <h1 class="h4 text-gray-900 mb-4"><?=lang('Auth.loginTitle')?></h1>
                                     </div>
 
+                                    <?= view('\Myth\Auth\Views\_message_block') ?>
+
                                     <form action="<?= route_to('login') ?>" method="post" class="user">
                                         <?= csrf_field() ?> 
 
