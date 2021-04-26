@@ -18,4 +18,9 @@ class Home extends BaseController
 	{
 		return view('auth/forgot');
 	}
+
+	public function user()
+	{
+		return view('user/index');
+	}
 }
