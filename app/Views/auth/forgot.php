@@ -17,7 +17,9 @@
                             <div class="p-5">
                                 <div class="text-center">
                                     <h1 class="h4 text-gray-900 mb-2"><?=lang('Auth.forgotPassword')?></h1>
-                                    <?= view('Myth\Auth\Views\_message_block') ?>
+
+                                    <?= view('\Myth\Auth\Views\_message_block') ?>
+
                                     <p class="mb-4"><?=lang('Auth.enterEmailForInstructions')?></p>
                                 </div>
 
@@ -25,8 +27,7 @@
                                     <?= csrf_field() ?>
 
                                     <div class="form-group">
-                                        <input type="email" class="form-control form-control-user <?php if(session('errors.email')) : ?>is-invalid<?php endif ?>"
-                                        name="email" aria-describedby="emailHelp" placeholder="<?=lang('Auth.email')?>">
+                                        <input type="email" class="form-control form-control-user <?php if(session('errors.email')) : ?>is-invalid<?php endif ?>" name="email" aria-describedby="emailHelp" placeholder="<?=lang('Auth.email')?>">
                                         <div class="invalid-feedback">
                                             <?= session('errors.email') ?>
                                         </div>
